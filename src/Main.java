@@ -1,11 +1,19 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Početak pravljenja kafe.");
-        System.out.println("Mlijevenje zrna kafe.");
-        System.out.println("Prokuhavanje vode.");
-        System.out.println("Mješanje prokuhane vode sa zdrobljenim zrnima kafe.");
-        System.out.println("Sipanje kape u šolju.");
-        System.out.println("Sipanje malo mlijeka u šolju.");
-        System.out.println("Kafa je spremna!");
+        Scanner unos = new Scanner(System.in);
+
+        System.out.println("Napiši koliko šolja kafe ti treba: ");
+        int šolje = unos.nextInt();
+
+        int voda = 200 * šolje;
+        int mlijeko = 50 * šolje;
+        int zrnaKafe = 15 * šolje;
+
+        System.out.printf("Za %d šolja kafe ti treba: ", šolje);
+        System.out.printf("%n %d ml vode", voda);
+        System.out.printf("%n %d ml mlijeka", mlijeko);
+        System.out.printf("%n %d g zrna kafe", zrnaKafe);
     }
 }
